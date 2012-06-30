@@ -1144,11 +1144,11 @@
       <function name="setting">
         <set name="single">
           <item name="MMS_Auto_Retrieve">true</item>
-          <item name="MMS_Roaming_Auto_Retrieve">false</item>
-          <item name="MMS_Msg_Size1">750K</item>
+          <item name="MMS_Roaming_Auto_Retrieve">true</item>
+          <item name="MMS_Msg_Size1">1M</item>
           <item name="MMS_Msg_Size2">2M</item>
           <item name="MMS_Msg_Size3">5M</item>
-          <item name="MMS_Msg_Size_Choose">2M</item>
+          <item name="MMS_Msg_Size_Choose">5M</item>
           <item name="MMS_Received_Notify">true</item>
           <item name="MMS_Play_Received_Notify">true</item>
           <item name="MMS_Received_Viberation">true</item>
@@ -1205,72 +1205,19 @@
     </module>
     <module name="Browser">
       <function name="bookmark">
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">OMJ's ROM</item>
-          <item name="url">http://forum.ppcgeeks.com/showthread.php?t=150224</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">ESPN</item>
-          <item name="url">http://www.espn.com</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">CNN</item>
-          <item name="url">http://www.cnn.com</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">Facebook</item>
-          <item name="url">http://touch.facebook.com</item>
-        </set>
+        <function name="bookmark">
         <set name="plenty">
           <!--%%File%%-->
           <item name="title">Google</item>
           <item name="url">http://www.google.com</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">Flickr</item>
-          <item name="url">http://www.flickr.com</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">HTC</item>
-          <item name="url">http://www.htc.com/us</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">AccuWeather</item>
-          <item name="url">http://www.accuweather.com/m/default.aspx?p=htcand&amp;loc</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">Yahoo</item>
-          <item name="url">http://www.yahoo.com</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">Wiki</item>
-          <item name="url">http://www.wikipedia.org</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">Twitter</item>
-          <item name="url">http://twitter.com</item>
-        </set>
-        <set name="plenty">
-          <!--%%File%%-->
-          <item name="title">GameLoft</item>
-          <item name="url">http://wapshop.gameloft.com/us/sprintchannel/hdplus/index.php</item>
-        </set>
+        </set>        
       </function>
       <function name="homepage">
         <set name="single" max="15">
           <item name="url">http://www.google.com</item>
         </set>
       </function>
+
     </module>
     <module name="Mail">
       <function name="provider">
@@ -1733,11 +1680,6 @@
       </function>
     </module>
     <module name="com.htc.feedback">
-      <function name="HTC_APP_CRASH">
-        <set name="single">
-          <item name="enable">0</item>
-        </set>
-      </function>
       <function name="SYSTEM_CRASH">
         <set name="single">
           <item name="enable">0</item>
