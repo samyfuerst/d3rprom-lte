@@ -62,6 +62,8 @@
           <item name="turn_off_report" type="boolean">yes</item>
           <item name="turn_off_application_log" type="boolean">yes</item>
           <item name="only_wifi_option" type="boolean">yes</item>
+          <item name="turn_off_tell_htc" type="boolean">yes</item>
+          <item name="hide_usage_report" type="boolean">yes</item>
         </set>
       </function>
     </module>
@@ -69,7 +71,7 @@
       <function name="settings">
         <set name="single">
           <item name="Enable_FOTA_UI" type="boolean">no</item>
-          <item name="Enable_Manual_Check" type="boolean">no</item>
+          <item name="Enable_Manual_Check" type="boolean">yes</item>
         </set>
       </function>
     </module>
@@ -118,7 +120,7 @@
       <function name="Step_Config">
         <set name="single">
           <item name="Set_Language" type="boolean">no</item>
-          <item name="Internet_Connection" type="boolean">no</item>
+          <item name="Internet_Connection" type="boolean">yes</item>
 		  <item name="Wi-Fi" type="boolean">yes</item>
         </set>
       </function>
@@ -150,18 +152,6 @@
           <item name="3">com.sdgtl.watch</item>
           <item name="4">com.htc.widget3d.watch</item>
           <item name="5">com.amazon.mp3</item>
-        </set>
-      </function>
-      <function name="hide_application_list">
-        <set name="single">
-          <item name="0">com.htc.android.iqrd</item>
-          <item name="1">com.htc.android.iqagent</item>
-        </set>
-      </function>
-      <function name="hide_service_list">
-        <set name="single">
-          <item name="0">com.htc.android.iqrd</item>
-          <item name="1">com.htc.android.iqagent</item>
         </set>
       </function>
       <function name="unsupport_disable_button_list">
