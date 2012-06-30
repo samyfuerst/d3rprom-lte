@@ -17,9 +17,6 @@ gsm.operator.numeric=310120
 gsm.sim.operator.iso-country=us
 gsm.operator.iso-country=us
 ro.net.apnwhitelist=admin
-ro.htc.checkin.delay=0
-ro.da1.enable=false
-ro.da1.method=false
 ro.watch.appid=com.sdgtl.watch.jelcl_40_ics
 ro.telephony.ipv6_capability=1
 dev.defaultwallpaper=/system/customize/resource/scene_wallpaper_htc_default.jpg
@@ -110,6 +107,7 @@ debug.qctwa.preservebuf=1
 dev.pm.dyn_samplingrate=1
 
 persist.radio.adb_log_on=1
+persist.adb.notify=0
 ro.baseband.arch=msm
 
 # Default network type.
@@ -164,6 +162,10 @@ media.stagefright.enable-scan=true
 #
 ro.use_data_netmgrd=true
 persist.data_netmgrd_mtu=1428
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
 #
 # system props for telephony modules
 #
@@ -191,7 +193,7 @@ ro.ril.hsxpa = 3
 ro.ril.def.agps.mode = 6
 
 # For HSDPA low throughput
-#ro.ril.disable.power.collapse = 1
+#
 
 #system props for time-services
 persist.timed.enable=true
@@ -257,12 +259,6 @@ ro.product.front_camera = 1.3M
 ro.product.processor = Dual Core
 ro.product.ram = 1GB
 
-# hTC FOTA property for SIE.
-ro.htc.checkin.delay = 3
-
-#ro.config.htc.nocheckin = 0
-ro.config.htc.noappupdate = 0
-
 # wifi
 wifi.softap.interface=wlan0
 wifi.softapconcurrent.interface=softap.0
@@ -297,8 +293,12 @@ windowsmgr.max_events_per_sec=150
 pm.sleep_mode=1
 ro.config.htc.nocheckin=1
 ro.config.nocheckin=1
+ro.htc.checkin.delay=0
+ro.config.htc.noappupdate = 1
 profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
+ro.ril.disable.power.collapse = 1
+
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
@@ -316,4 +316,9 @@ ro.service.dpsvr.enabled=true
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 ro.tether.denied=false
-persist.adb.notify=0
+ro.da1.enable=false
+ro.da1.method=false
+ro.min_pointer_dur=8
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+
