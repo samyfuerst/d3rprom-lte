@@ -1,0 +1,11 @@
+#!/system/bin/sh
+#
+
+busybox rm -f /cache/*.apk;
+busybox rm -f /cache/*.tmp;
+busybox rm -f /cache/recovery/*;
+busybox rm -f /data/dalvik-cache/*.apk;
+busybox rm -f /data/dalvik-cache/*.tmp;
+busybox rm -f /data/system/userbehavior.db;
+busybox chmod 400 /data/system/usagestats/;
+busybox chmod 400 /data/system/appusagestats/;

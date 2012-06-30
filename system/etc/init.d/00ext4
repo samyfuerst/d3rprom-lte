@@ -1,0 +1,6 @@
+#!/system/bin/sh
+#
+
+busybox mount -o remount,ro,noatime,noauto_da_alloc,nodiratime,barrier=0,nobh /system;
+busybox mount -o remount,noatime,noauto_da_alloc,nodiratime,nodev,barrier=0,nobh /data;
+busybox mount -o remount,noatime,noauto_da_alloc,nodiratime,nodev,barrier=0,nobh /cache;
