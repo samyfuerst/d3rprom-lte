@@ -14,8 +14,8 @@ case "$target" in
     "msm8960")
      echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
      echo "ondemand" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-     echo 93 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-     echo 50000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+     echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+     echo 25000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
      echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
      echo 2 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
      echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential
