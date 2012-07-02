@@ -99,7 +99,7 @@ debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=dyn
 # For ICS project, default 32m/48m
-dalvik.vm.heapsize=128m
+dalvik.vm.heapsize=160m
 dalvik.vm.heapgrowthlimit=64m
 ro.sf.compbypass.enable=1
 debug.enabletr=true
@@ -191,6 +191,7 @@ ro.ril.hsxpa = 3
 
 # For the default value of agps
 ro.ril.def.agps.mode = 6
+ro.ril.def.agps.feature = 1
 
 # For HSDPA low throughput
 #
@@ -250,17 +251,18 @@ ro.sdcard2 = 1
 ro.phone_fat = 1
 
 # Following property will be reference by Settings.
-ro.product.display_resolution = 4.7 inch 720p resolution
+ro.product.display_resolution = 4.7IN 720P SUPER LCD
 
 # Camera H/W information
-ro.product.main_camera = 8M
-ro.product.front_camera = 1.3M
+ro.product.main_camera = 8MP
+ro.product.front_camera = 1.3MP
 
-ro.product.processor = Dual Core
+ro.product.processor = 1.5GHZ DUAL KRAIT
 ro.product.ram = 1GB
 
 # wifi
 wifi.softap.interface=wlan0
+wifi.supplicant_scan_interval=120
 wifi.softapconcurrent.interface=softap.0
 ro.product.wifi = 802.11 a/b/g/n
 
@@ -289,7 +291,7 @@ wlan.driver.status=
 ro.product.hwreset = 1
 
 ro.media.enc.jpeg.quality=100 
-windowsmgr.max_events_per_sec=150
+windowsmgr.max_events_per_sec=180
 pm.sleep_mode=1
 ro.config.htc.nocheckin=1
 ro.config.nocheckin=1
@@ -298,6 +300,29 @@ ro.config.htc.noappupdate = 1
 profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
 ro.ril.disable.power.collapse = 1
+
+# 3G SIGNAL STUFF
+ro.ril.hsxpa=3
+ro.ril.gprsclass=32
+ro.ril.hep=1
+ro.ril.enable.dtm=1
+ro.ril.hsdpa.category=28
+ro.ril.enable.a53=1
+ro.ril.enable.3g.prefix=1
+ro.ril.htcmaskw1.bitmask=4294967295
+ro.ril.htcmaskw1=268449905
+ro.ril.hsupa.category=9
+ro.ril.enable.sdr=1
+ro.ril.enable.gea3=1
+ro.ril.enable.fd.plmn.prefix=23402,23410,23411
+ro.ril.enable.a52=0
+
+# NET SPEED STUFF
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
 
 #
 # ADDITIONAL_BUILD_PROPERTIES
@@ -321,4 +346,8 @@ ro.da1.method=false
 ro.min_pointer_dur=8
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
+debug.performance.tuning=1
+video.accelerate.hw=1
+ro.HOME_APP_ADJ=1
+ro.HOME_APP_MEM=3072
 
