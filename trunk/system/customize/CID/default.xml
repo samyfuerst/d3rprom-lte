@@ -142,6 +142,7 @@
     </module>
   </category>
   <ShutdownConfiguration>
+    <ShutdownAnimation image_png="/data/local/hTC_downanim.zip" image="" fps="20" />
   </ShutdownConfiguration>
   <category name="Settings">
     <module name="list">
