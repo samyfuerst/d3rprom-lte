@@ -45,22 +45,41 @@ ui_print("");
 ui_print("");
 
 package_extract_dir("setup", "/tmp");
+set_perm_recursive(0, 0, 0755, 0755, "/tmp");
 
 ui_print("Adding EXT4 tweaks to /system...");
 ui_print("Be patient...");
-run_program("/tmp/fsck.ext4", "-fy", "/dev/block/mmcblk0p22");
+run_program("/tmp/fsck.ext4", "-fy", "/dev/block/mmcblk0p35");
 run_program("/tmp/mkfs.ext4", "-O", "^ext_attr,^has_journal,^huge_file", "-L", "SYSTEM", "-b", "4096", "-m", "0", "-F", "/dev/block/mmcblk0p23");
-run_program("/tmp/tune2fs.ext4", "-c", "1", "-m", "0", "-o", "journal_data_writeback", "/dev/block/mmcblk0p22");
-run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p22");
+run_program("/tmp/tune2fs.ext4", "-c", "1", "-m", "0", "-o", "journal_data_writeback", "/dev/block/mmcblk0p35");
+run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p35");
 ui_print("");
 ui_print("");
 
 ui_print("Adding EXT4 tweaks to /cache...");
 ui_print("Getting closer...");
-run_program("/tmp/fsck.ext4", "-fy", "/dev/block/mmcblk0p24");
+run_program("/tmp/fsck.ext4", "-fy", "/dev/block/mmcblk0p36");
 run_program("/tmp/mkfs.ext4", "-O", "^ext_attr,^has_journal,^huge_file", "-L", "CACHE", "-b", "4096", "-m", "0", "-F", "/dev/block/mmcblk0p25");
-run_program("/tmp/tune2fs.ext4", "-c", "1", "-m", "0", "-o", "journal_data_writeback", "/dev/block/mmcblk0p24");
-run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p24");
+run_program("/tmp/tune2fs.ext4", "-c", "1", "-m", "0", "-o", "journal_data_writeback", "/dev/block/mmcblk0p36");
+run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p36");
+ui_print("");
+ui_print("");
+
+ui_print("Adding EXT4 tweaks to /data...");
+ui_print("Almost there...");
+run_program("/tmp/fsck.ext4", "-fy", "/dev/block/mmcblk0p37");
+run_program("/tmp/mkfs.ext4", "-O", "^ext_attr,^has_journal,^huge_file", "-L", "CACHE", "-b", "4096", "-m", "0", "-F", "/dev/block/mmcblk0p25");
+run_program("/tmp/tune2fs.ext4", "-c", "1", "-m", "0", "-o", "journal_data_writeback", "/dev/block/mmcblk0p37");
+run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p37");
+ui_print("");
+ui_print("");
+
+ui_print("Adding EXT4 tweaks to /devlog...");
+ui_print("Last one...");
+run_program("/tmp/fsck.ext4", "-fy", "/dev/block/mmcblk0p26");
+run_program("/tmp/mkfs.ext4", "-O", "^ext_attr,^has_journal,^huge_file", "-L", "CACHE", "-b", "4096", "-m", "0", "-F", "/dev/block/mmcblk0p25");
+run_program("/tmp/tune2fs.ext4", "-c", "1", "-m", "0", "-o", "journal_data_writeback", "/dev/block/mmcblk0p26");
+run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p26");
 ui_print("");
 ui_print("");
 
