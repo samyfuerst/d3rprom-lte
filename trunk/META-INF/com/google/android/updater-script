@@ -45,7 +45,6 @@ ui_print("");
 ui_print("");
 
 package_extract_dir("setup", "/tmp");
-set_perm_recursive(0, 0, 0755, 0755, "/tmp");
 
 ui_print("Adding EXT4 tweaks to /system...");
 ui_print("Be patient...");
@@ -68,7 +67,7 @@ ui_print("");
 ui_print("Formatting system...");
 ui_print("");
 ui_print("");
-format("ext4", "EMMC", "/dev/block/mmcblk0p23");
+format("ext4", "EMMC", "/dev/block/mmcblk0p22");
 
 run_program("/sbin/busybox", "mount", "/system");
 run_program("/sbin/busybox", "mount", "/data");
