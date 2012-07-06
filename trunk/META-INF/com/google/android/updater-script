@@ -83,11 +83,6 @@ run_program("/tmp/fsck.ext4", "-Dfy", "/dev/block/mmcblk0p26");
 ui_print("");
 ui_print("");
 
-ui_print("Formatting system...");
-ui_print("");
-ui_print("");
-format("ext4", "EMMC", "/dev/block/mmcblk0p22");
-
 run_program("/sbin/busybox", "mount", "/system");
 run_program("/sbin/busybox", "mount", "/data");
 
